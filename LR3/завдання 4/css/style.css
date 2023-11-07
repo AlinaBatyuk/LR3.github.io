@@ -1,0 +1,12 @@
+.block-up, .block-down{
+	width: 300px;
+	height: 50px;
+	border: 2px ridge black;
+	margin-left: 55px;
+}
+.block-left{
+	width: 50px;
+	height: 600px;
+	border: 2px ridge black;
+	margin-top: -40px;
+}

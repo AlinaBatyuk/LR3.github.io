@@ -1,29 +1,55 @@
-const randomNum1 = Math.floor(Math.random() * 10) + 1;
-const randomNumber1Element = document.getElementById("randomNumber1");
-    randomNumber1Element.textContent = randomNum;
-const randomNum2 = Math.floor(Math.random() * 10) + 1;
-const randomNumber2Element = document.getElementById("randomNumber2");
-    randomNumber2Element.textContent = randomNum;
 
 
+function getNumber() {
+    console.log('getNumber')
+    const randomNum1 = Math.floor(Math.random() * 10) + 1;
+    const randomNumber1Element = document.getElementById("randomNumber1");
+        randomNumber1Element.textContent = randomNum1;
+    return randomNum1;
+}
+
+
+getNumber();
+let result = getNumber();
+console.log(result)
+
+function getNumber1() {
+    console.log('getNumber1')
+    const randomNum2 = Math.floor(Math.random() * 10) + 1;
+    const randomNumber2Element = document.getElementById("randomNumber2");
+        randomNumber2Element.textContent = randomNum2;
+    return randomNum2;
+}
+
+
+getNumber1();
+let result1 = getNumber1();
+console.log(result1)
 const fahrenheitInput = document.getElementById('fahrenheitInput');
         // const celsiusInput = document.getElementById('celsiusInput');
-    celsiusInput.addEventListener("click", function () {
-      const fahrenheit = fahrenheitInput.value;
-        
-        fahrenheitInput.addEventListener('input', function() {
+
+    //   const fahrenheit = fahrenheitInput.value;
+    // });
+        celsiusInput.addEventListener("click", function () {
             const fahrenheit = parseFloat(fahrenheitInput.value);
             console.log("yes")
-            if (!isNaN(fahrenheit) & (randomNum1*randomNum2)==fahrenheit) {
+            if (!isNaN(fahrenheit) & (result*result1)==fahrenheit) {
+                const resultElement1 = document.getElementById("result");
+                resultElement1.textContent = "Відповідь правильна";
 
                 //зробити так щоб при натисканні перевірити правильну відаовідь
-                document.write("Відповідь правильна");
-                // const celsius = (5/9) * (fahrenheit - 32);
-                // celsiusInput.value = celsius.toFixed(2); // Виводимо результат з округленням до двох знаків після коми
+                // document.write("Відповідь правильна");
             } else {
-                document.write("Відповідь не правильна ", fahrenheit); // Якщо введене значення не є числом, очищаємо поле для Цельсія
+                const resultElement = document.getElementById("result");
+                resultElement.textContent = "Відповідь не правильна, ваша відповідь " + fahrenheit;
+                // document.write("Відповідь не правильна, ваша відповідь ", fahrenheit); 
             }
-        });
+        
+    });
+        nextInput.addEventListener("click", function () {
+            getNumber();
+            getNumber1();
+
     });
         
         // celsiusInput.addEventListener('input', function() {

@@ -1,0 +1,21 @@
+.button1{
+	width: 160px;
+	height: 20px;
+	background: lightgrey;
+	text-align: center;
+	border: 1px solid black;
+}
+.button2{
+	width: 100px;
+	height: 20px;
+	background: lightgrey;
+	text-align: center;
+	border: 1px solid black;
+}
+.correct{
+	display: flex;
+	gap: 5px;
+}
+.radio-buttons{
+	display: grid;
+}
